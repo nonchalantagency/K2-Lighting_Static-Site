@@ -24,7 +24,8 @@ export function initManufCard() {
 
             const text = el.querySelector(".manuf-card-name");
             const tray = el.querySelector(".manuf-card-tray");
-            const div = el.querySelector(".manuf-tray-div")
+            const div = el.querySelector(".manuf-tray-div");
+            const img = el.querySelector(".manuf-card-logo");
 
             const tl = gsap.timeline({paused: true});
 
@@ -56,7 +57,17 @@ export function initManufCard() {
                 height: "auto",
                 ease: defaults.ease,
                 duration: defaults.duration
-            },0.1)
+            },0)
+
+            // IMG
+            tl.fromTo(img, {
+                scale: 1
+            },
+            {
+                scale: 1.1,
+                ease: defaults.ease,
+                duration: defaults.duration
+            }, 0)
 
             // TRAY DIV
             tl.fromTo(div, {
@@ -66,7 +77,7 @@ export function initManufCard() {
                 width: "100%",
                 ease: defaults.ease,
                 duration: (defaults.duration)
-            },">")
+            },0)
 
             el.addEventListener("mouseenter", () => {
                 tl.timeScale(1);

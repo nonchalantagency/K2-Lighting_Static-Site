@@ -19,7 +19,7 @@ export function HomePage() {
       <header className="section hero light">
         <div className="wrapper full-h">
           <div className="content vertical align-centre justify-centre rem-1 above">
-            <h1 className="page-heading centred">K2 Lighting & Controls</h1>
+            <h1 className="page-heading centred hero"><span style={{fontWeight: 700}}>K2</span> Lighting & Controls</h1>
             <div className="copy-div no-gap centred">
               <p>K2 Lighting & Controls will launch their full site in 2027. Please see our list of suppliers.</p>
             </div>
