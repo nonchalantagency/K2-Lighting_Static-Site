@@ -1,0 +1,17 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202020;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+html { min-width: 320px; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+#root { min-height: 100vh; }
+#site-content { min-height: 100vh; }
+.page { width: min(90%, 1100px); margin: 0 auto; padding: clamp(4rem, 10vw, 9rem) 0; }
+.page h1 { max-width: 14ch; margin: 0 0 1.5rem; font-size: clamp(2.5rem, 7vw, 6rem); line-height: .98; }
+.page p { max-width: 60ch; font-size: 1.125rem; line-height: 1.5; }
+.eyebrow { margin-bottom: 1rem; font-size: .8rem !important; text-transform: uppercase; letter-spacing: .08em; }

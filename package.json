@@ -1,0 +1,31 @@
+{
+  "name": "react-static-framework-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc -b",
+    "build:client": "vite build",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist-server --emptyOutDir",
+    "prerender": "node scripts/prerender.mjs",
+    "build": "npm run typecheck && npm run build:client && npm run build:server && npm run prerender",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "latest",
+    "sass-embedded": "^1.106.1",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
