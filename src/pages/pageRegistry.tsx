@@ -1,7 +1,7 @@
 import type { ComponentType } from "react";
 import { HomePage } from "./home/Home";
-import { AboutPage } from "./about/About";
-import { WorkPage } from "./work/Work";
+// import { AboutPage } from "./about/About";
+// import { WorkPage } from "./work/Work";
 
 export type PageSeo = {
   title: string;
@@ -23,18 +23,6 @@ export const pageRegistry: PageDefinition[] = [
     component: HomePage,
     label: "Home",
     seo: { title: "Home | Your Site", description: "A short description of your website." },
-  },
-  {
-    path: "/about",
-    component: AboutPage,
-    label: "About",
-    seo: { title: "About | Your Site", description: "About this business or project." },
-  },
-  {
-    path: "/work",
-    component: WorkPage,
-    label: "Work",
-    seo: { title: "Work | Your Site", description: "Selected projects and work." },
   },
 ];
 

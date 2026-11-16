@@ -1,0 +1,32 @@
+@use '../../styles/breakpoints.scss' as bp;
+
+
+.manuf-card {
+    grid-column: span 4;
+    background-color: var(--colour-light);
+
+    padding: 1rem;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include bp.tablet {
+        grid-column: span 2;
+    }
+    @include bp.mobile-l {
+        grid-column: span 4;
+    }
+}
+
+.manuf-card-name {
+    font-size: var(--text-h6);
+    color: var(--colour-dark);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+}

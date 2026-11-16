@@ -1,0 +1,34 @@
+@use '../../styles/breakpoints.scss' as bp;
+
+
+
+.button {
+    border-width: 1px;
+    border-radius: .25em;
+    border-color: var(--colour-dark);
+
+    padding: 0.5em .75em;
+
+    font-size: var(--text-h6);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-text-wrap {
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-text {
+    color: var(--colour-dark);
+
+    &.absolute {
+        position: absolute;
+        bottom: 100%;
+    }
+}
