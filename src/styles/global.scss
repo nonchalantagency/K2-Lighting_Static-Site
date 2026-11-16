@@ -70,16 +70,16 @@ $mobile: 479px;
 /* ========================================
    COLOURS
 ======================================== */
-  --colour-dark: #1f1f1f;
-  --colour-dark-mid: #727272;
+  --colour-dark: #1c1c1c;
+  --colour-dark-mid: #303030;
   --colour-dark-transparent: #1f1f1f00;
 
   --colour-light: #f3f3f3;
   --colour-light-mid: #cecece;
   --colour-light-transparent: #f3f3f300;
 
-  --colour-cta: #9340FF;
-  --colour-cta-mid: #a966ff;
+  --colour-cta: #0dd4c7;
+  --colour-cta-mid: #0eb8ad;
 
   --colour-cta-dark: #3b1a66;
   --colour-cta-transparent: #9340FF00;
@@ -241,6 +241,7 @@ a {
 
 .section.hero {
 
+  position: relative;
   padding: 0;
   height: 100vh;
   padding-top: var(--nav-h);
@@ -371,6 +372,10 @@ a {
   &.rem-2 {
     gap: 2rem;
   }
+  &.above {
+    position: relative;
+    z-index: 10;
+  }
 
   @include bp.tablet {
     grid-column: 1/7;
@@ -414,11 +419,21 @@ a {
 
 
 .page-heading {
-  font-size: var(--text-h1);
-  font-weight: 700;
+  font-size: var(--text-h0);
+  font-weight: 400;
+  color: var(--colour-light);
+
+  text-transform: uppercase;
   &.centred {
     text-align: center;
   }
+}
+
+.section-heading {
+  font-size: var(--text-h1);
+  font-weight: 500;
+
+  margin-bottom: 2rem;
 }
 
 .heading {
@@ -519,4 +534,23 @@ a {
 
 .active-flip-item {
   z-index: 200;
+}
+
+
+
+.hero-bg-div {
+  position: absolute;
+  inset: 0%;
+  background-color: var(--colour-dark);
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: .8;
+  filter: blur(8px);
+  // mix-blend-mode: soft-light;
 }
