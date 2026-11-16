@@ -21,12 +21,11 @@ export function HomePage() {
           <div className="content vertical align-centre justify-centre rem-1 above">
             <h1 className="page-heading centred">K2 Lighting & Controls</h1>
             <div className="copy-div no-gap centred">
-              <p>K2 Lighting & Controls will launch their full site in 2027.</p>
-              <p>Please see our list of suppliers.</p>
+              <p>K2 Lighting & Controls will launch their full site in 2027. Please see our list of suppliers.</p>
             </div>
             <div className="button-wrap">
-              <CtaButton text="See Suppliers"></CtaButton>
-              <Button text="Get in Touch"></Button>
+              <CtaButton text="See Suppliers" link="/#home_manufs" linkType="anchor"></CtaButton>
+              <Button text="Get in Touch" link="/#home_contact" linkType="anchor"></Button>
             </div>
           </div>
         </div>
@@ -36,6 +35,8 @@ export function HomePage() {
       </header>
 
       <main className="section">
+        <div className="anchor-link-div" id="home_manufs"></div>
+
         <div className="wrapper">
           <h2 className="section-heading" data-anim="split-words">Our Partners</h2>
           <div className="grid">
@@ -52,8 +53,8 @@ export function HomePage() {
                     <div className="manuf-tray-wrap">
                       <div className="manuf-card-tray">
                         <p className="manuf-card-cta-text">Visit Website</p>
-                        <div className="manuf-tray-div"></div>
                       </div>
+                      <div className="manuf-tray-div"></div>
                     </div>
                   </a>
                 </div>

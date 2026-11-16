@@ -1,4 +1,5 @@
 import { resolveCssValue } from "./core/resolveCss";
+import { resolveStagger } from "./core/resolveStagger";
 
 import { gsap } from "./gsap";
 import { SplitText } from "gsap/all";
@@ -6,9 +7,10 @@ import { SplitText } from "gsap/all";
 gsap.registerPlugin(SplitText);
 
 const defaults = {
-    duration: 0.63,
-    ease: "power2.inOut"
+    duration: 0.4,
+    ease: "power2.out"
 }
+
 export function initButtonAnims() {
 
     const ctx = gsap.context(() => {
@@ -17,12 +19,11 @@ export function initButtonAnims() {
 
         button.forEach((el) => {
 
-
             const tl = gsap.timeline({paused: true});
 
             const text = el.querySelectorAll(`[data-anim="button-text"]`);
-
-
+            const div = el.querySelector(".button-div")
+            const arrows = el.querySelectorAll(".button-icon-img")
 
             // SPLIT TEXT
             const firstSplit = new SplitText(text[0], {
@@ -33,26 +34,46 @@ export function initButtonAnims() {
                 type: "chars"
             });
 
+            const firstTargets = firstSplit.chars;
+            const secondTargets = secondSplit.chars;
 
-            tl.fromTo(firstSplit.chars, {
+            // STAGGER
+            const charDuration = defaults.duration * 0.5;
+
+            const firstStagger = resolveStagger(
+                defaults.duration,
+                charDuration,
+                firstTargets.length,
+                0.01
+            );
+
+            const secondStagger = resolveStagger(
+                defaults.duration,
+                charDuration,
+                secondTargets.length,
+                0.01
+            );
+
+            // TEXT ANIMATION
+            tl.fromTo(firstTargets, {
                 yPercent: 0
             },
             {
                 yPercent: 100,
                 ease: defaults.ease,
-                duration: (0.5 * defaults.duration),
-                stagger: 0.01
-            }, 0)
-            tl.fromTo(secondSplit.chars, {
+                duration: charDuration,
+                stagger: firstStagger
+            }, 0);
+
+            tl.fromTo(secondTargets, {
                 yPercent: 0
             },
             {
                 yPercent: 100,
                 ease: defaults.ease,
-                duration: (0.5 * defaults.duration),
-                stagger: 0.01
-            }, 0)
-
+                duration: charDuration,
+                stagger: secondStagger
+            }, 0);
 
             // COLOUR CHANGE
             const ogBgColour = resolveCssValue(el, "background-color");
@@ -64,47 +85,59 @@ export function initButtonAnims() {
             const ogBorderColour = resolveCssValue(el, "border-color");
             const targetBorderColour = resolveCssValue(el.getAttribute("data-border-colour-target"), "border-color");
 
-
             // ON BUTTON ELEMENT
             tl.fromTo(el, {
                 backgroundColor: ogBgColour ?? "magenta",
                 borderColor: ogBorderColour ?? "magenta"
-
             },
             {
                 backgroundColor: targetBgColour ?? "magenta",
                 borderColor: targetBorderColour ?? "magenta",
                 ease: defaults.ease,
                 duration: defaults.duration
-            }, 0)
+            }, 0);
 
             tl.fromTo(text, {
-                color: ogTextColour ?? "magenta",
+                color: ogTextColour ?? "magenta"
             },
             {
                 color: targetTextColour ?? "magenta",
                 ease: defaults.ease,
                 duration: defaults.duration
+            }, 0);
+
+            tl.fromTo(div, {
+                width: "0%"
+            },
+            {
+                width: "100%",
+                ease: defaults.ease,
+                duration: defaults.duration
+            },0)
+
+            tl.fromTo(arrows, {
+                xPercent: 0
+            },
+            {
+                xPercent: 100,
+                ease: defaults.ease,
+                duration: defaults.duration
             }, 0)
 
-
+            // HOVER
             el.addEventListener("mouseenter", () => {
-
                 tl.timeScale(1);
                 tl.play();
-
             });
 
-
             el.addEventListener("mouseleave", () => {
-
-                tl.timeScale(1.25);
+                tl.timeScale(1);
                 tl.reverse();
             });
 
-            
-        })
-    })
+        });
+
+    });
 
     return () => ctx.revert();
 }

@@ -3,19 +3,31 @@
 
 
 .button {
-    border-width: 1px;
-    border-radius: .25em;
+    border-bottom-width: 1px;
+    // border-radius: .25em;
     border-color: var(--colour-dark);
 
-    padding: 0.5em .75em;
-
+    // padding: 0.5em .75em;
+    padding-bottom: 0.75rem;
     font-size: var(--text-h6);
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    gap: .5em;
+
+    position: relative;
+
+}
+
+.button-link { 
+    position: absolute;
+    inset: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
 }
 
 .button-text-wrap {
@@ -24,11 +36,52 @@
     overflow: hidden;
 }
 
+.button-inner {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    align-items: center;
+
+}
+
 .button-text {
     color: var(--colour-dark);
 
     &.absolute {
         position: absolute;
         bottom: 100%;
+    }
+}
+
+.button-div {
+    width: 100%;
+    height: 2px;
+    align-self: start;
+    
+}
+
+.button-icon-wrap {
+    width: 1em;
+    height: 1em;
+    aspect-ratio: 1/1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.button-icon-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+
+    &.absolute {
+        position: absolute;
+        right: 100%;
     }
 }

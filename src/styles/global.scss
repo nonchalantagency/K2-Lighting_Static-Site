@@ -21,7 +21,9 @@ $mobile-l: 767px;
 $mobile: 479px;
 
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 /* ========================================
    GLOBAL CSS VARIABLES
@@ -174,6 +176,7 @@ a {
 ======================================== */
 
 .section {
+  position: relative;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 
@@ -461,6 +464,8 @@ a {
 
   font-size: var(--text-h6);
 
+  color: var(--colour-light);
+
   &.no-gap {
     gap: 0px;
   }
@@ -553,4 +558,14 @@ a {
   opacity: .8;
   filter: blur(8px);
   // mix-blend-mode: soft-light;
+}
+
+
+.anchor-link-div {
+  width: 100%;
+  top: 0%;
+  position: absolute;
+  pointer-events: none;
+  height: 0px;
+  opacity: 0;
 }

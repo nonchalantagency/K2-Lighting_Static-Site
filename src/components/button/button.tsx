@@ -7,13 +7,19 @@ export function Button(
         text = "Button Text",
         
         bgColour = "transparent",
-        targetBgColour = "var(--colour-dark-mid)",
+        targetBgColour = "transparent",
 
-        textColour = "var(--colour-dark)",
+        textColour = "var(--colour-light)",
         targetTextColour = "var(--colour-light)",
 
-        borderColour = "var(--colour-dark)",
-        targetBorderColour = "var(--colour-dark-mid)",
+        borderColour = "transparent",
+        targetBorderColour = "transparent",
+
+        divColour = "var(--colour-light)",
+
+        iconUrl = "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/icons/arrow_light.png",
+
+        linkType = "external",
 
     }:
     {
@@ -28,6 +34,12 @@ export function Button(
 
         borderColour?: string;
         targetBorderColour?: string;
+
+        divColour?: string;
+
+        iconUrl?: string;
+
+        linkType?: string;
     }
 ) {
 
@@ -37,8 +49,7 @@ export function Button(
 
 
         <>
-            <Link
-            to={link}
+            <div
             className="button"
             data-anim="button"
             data-bg-colour-target={targetBgColour}
@@ -51,12 +62,21 @@ export function Button(
                 borderColor: borderColour,
             }}>
 
-                <div className="button-text-wrap">
-                    <p className="button-text" data-anim="button-text" style={{color: textColour}}>{text}</p>
-                    <p className="button-text absolute" data-anim="button-text" style={{color: textColour}}>{text}</p>
-                </div>
+            {linkType === "external" ? (<Link to={link} className="button-link"></Link>) : (<a href={link} className="button-link"></a>)}
 
-            </Link>
+                <div className="button-inner">
+                    <div className="button-text-wrap">
+                        <p className="button-text" data-anim="button-text" style={{color: textColour}}>{text}</p>
+                        <p className="button-text absolute" data-anim="button-text" style={{color: textColour}}>{text}</p>
+                    </div>
+                    <div className="button-icon-wrap">
+                        <img className="button-icon-img" src={iconUrl}></img>
+                        <img className="button-icon-img absolute" src={iconUrl}></img>
+                    </div>
+                </div>
+                <div className="button-div" style={{backgroundColor: divColour}}></div>
+
+            </div>
         
         </>
     )

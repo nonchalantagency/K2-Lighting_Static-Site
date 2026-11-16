@@ -65,8 +65,8 @@ export function initManufCard() {
             {
                 width: "100%",
                 ease: defaults.ease,
-                duration: defaults.duration
-            })
+                duration: (defaults.duration)
+            },">")
 
             el.addEventListener("mouseenter", () => {
                 tl.timeScale(1);

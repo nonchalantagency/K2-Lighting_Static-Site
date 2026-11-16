@@ -3,11 +3,13 @@ import { Button } from "./button";
 export function CtaButton(
     {
         text = "CTA Button",
-        link = "#"
+        link = "#",
+        linkType = "external"
     }:
     {
         text?: string;
         link?: string;
+        linkType?: string;
     }
 ) {
 
@@ -17,13 +19,20 @@ export function CtaButton(
         text={text}
         link={link}
         
-        bgColour="var(--colour-cta)"
-        textColour="var(--colour-light)"
-        borderColour="var(--colour-cta)"
+        bgColour="transparent"
+        textColour="var(--colour-cta)"
+        borderColour="transparent"
         
-        targetBgColour="var(--colour-cta-mid)"
-        targetTextColour="var(--colour-light)"
-        targetBorderColour="var(--colour-cta-mid)">
+        targetBgColour="transparent"
+        targetTextColour="var(--colour-cta)"
+        targetBorderColour="transparent"
+        
+        divColour="var(--colour-cta)"
+
+        iconUrl="https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/icons/arrow_cta.png"
+
+        linkType={linkType}
+        >
 
         </Button>
     )
