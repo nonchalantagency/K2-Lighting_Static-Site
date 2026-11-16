@@ -400,6 +400,8 @@ a {
 
   gap: 1rem;
 
+  margin-top: 1.5rem;
+
   @include bp.mobile-l {
     width: 100%;
     flex-direction: column;
@@ -437,6 +439,10 @@ a {
   font-weight: 500;
 
   margin-bottom: 2rem;
+
+  &.light {
+    color: var(--colour-light);
+  }
 }
 
 .heading {

@@ -62,6 +62,15 @@ export function HomePage() {
           </div>
         </div>
       </main>
+
+      <section className="section dark">
+        <div className="wrapper">
+          <h2 className="section-heading light">Contact</h2>
+          <div className="grid">
+            
+          </div>
+        </div>
+      </section>
     
     </>
   )
