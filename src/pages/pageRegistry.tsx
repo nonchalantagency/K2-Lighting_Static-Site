@@ -22,7 +22,10 @@ export const pageRegistry: PageDefinition[] = [
     path: "/",
     component: HomePage,
     label: "Home",
-    seo: { title: "Home | Your Site", description: "A short description of your website." },
+    seo: {
+        title: "K2 Lighting & Controls | Lighting Manufacturers & Suppliers",
+        description: "Discover K2 Lighting & Controls' specialist lighting manufacturers and suppliers."
+    }
   },
 ];
 
@@ -38,7 +41,7 @@ export function getPageDefinition(pathname: string) {
 
 export function getPageSeo(pathname: string): PageSeo {
   return getPageDefinition(pathname)?.seo ?? {
-    title: "Page not found | Your Site",
+    title: "Page not found | K2 Lighting & Control",
     description: "The page you are looking for could not be found.",
     noIndex: true,
   };

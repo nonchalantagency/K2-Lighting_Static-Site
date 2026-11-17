@@ -76,7 +76,7 @@ export function HomePage() {
       <section className="section dark">
         <div className="anchor-link-div" id="home_contact"></div>
         <div className="wrapper">
-          <h2 className="section-heading light">Contact</h2>
+          <h2 className="section-heading light" data-anim="split-words">Contact</h2>
           <div className="grid">
 
               <div className="contact-wrap">
