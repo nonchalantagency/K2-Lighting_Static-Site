@@ -18,7 +18,7 @@ export function initScrollAnims() {
 
     
     
-        const lazyLoads = document.querySelectorAll(`[data-anim="lazy-load"]`);
+        const lazyLoads = document.querySelectorAll(`[data-anim="lazy-load"], [data-anim-alt="lazy-load"]`);
 
         const splitWords = document.querySelectorAll(`[data-anim="split-words"]`)
 

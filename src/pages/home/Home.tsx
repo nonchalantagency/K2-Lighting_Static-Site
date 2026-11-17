@@ -80,7 +80,7 @@ export function HomePage() {
           <div className="grid">
 
               <div className="contact-wrap">
-                <a className="contact" href="mailto:k2@k2lighting.co.uk" data-anim="contact">
+                <a className="contact" href="mailto:k2@k2lighting.co.uk" data-anim="contact" data-anim-alt="lazy-load">
 
                   <p className="contact-copy">For lighting enquiries:</p>
                   <div className="contact-row">
@@ -91,7 +91,7 @@ export function HomePage() {
                   </div>
                   <div className="contact-div"></div>
                 </a>
-                <a className="contact" href="mailto:js@k2controls.co.uk" data-anim="contact">
+                <a className="contact" href="mailto:js@k2controls.co.uk" data-anim="contact" data-anim-alt="lazy-load">
 
                   <p className="contact-copy">For control enquiries:</p>
                   <div className="contact-row">
