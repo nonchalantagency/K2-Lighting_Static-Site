@@ -61,10 +61,12 @@ export function initManufCard() {
 
             // IMG
             tl.fromTo(img, {
-                scale: 1
+                scale: 1,
+                filter: "grayscale(1)"
             },
             {
                 scale: 1.1,
+                filter: "grayscale(0)",
                 ease: defaults.ease,
                 duration: defaults.duration
             }, 0)

@@ -14,17 +14,17 @@ export const manufacturerData: manufacturerDataType[] = [
     {
         name: "Burlington Waugh",
         websiteUrl: "https://www.burlingtonwaugh.com/",
-        logoUrl: ""
+        logoUrl: "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/manufacturer%20logos/burlingtonwaugh.png"
     },
     {
         name: "Tryka",
         websiteUrl: "https://tryka.com/products/",
-        logoUrl: ""
+        logoUrl: "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/manufacturer%20logos/Tryka.png"
     },
     {
-        name: "Super",
+        name: "Onok",
         websiteUrl: "https://onoklighting.com/en_US/shop/super-11394#attribute_values=13,997,520,298,784,78,94",
-        logoUrl: ""
+        logoUrl: "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/manufacturer%20logos/Onok.png"
     },
     {
         name: "Ewo",
@@ -32,18 +32,18 @@ export const manufacturerData: manufacturerDataType[] = [
         logoUrl: "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/manufacturer%20logos/ewo.png"
     },
     {
-        name: "Products",
-        websiteUrl: "Products | Stoane Lighting",
-        logoUrl: ""
+        name: "Stoane Lighting",
+        websiteUrl: "https://www.stoanelighting.com/products",
+        logoUrl: "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/manufacturer%20logos/stoane.png"
     },
     {
         name: "PXF Lighting",
         websiteUrl: "https://www.pxf.pl/en",
-        logoUrl: ""
+        logoUrl: "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/manufacturer%20logos/PXF.png"
     },
     {
         name: "Marset",
         websiteUrl: "https://www.marset.com/en/",
-        logoUrl: ""
+        logoUrl: "https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/manufacturer%20logos/Marset.png"
     },
 ]

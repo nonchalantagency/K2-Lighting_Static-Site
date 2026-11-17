@@ -1,6 +1,7 @@
 import { initScrollAnims } from "./scrollAnims";
 import { initButtonAnims } from "./buttonAnims";
 import { initManufCard } from "./manufCard";
+import { initNavAnims } from "./nav";
 
 export function initAnims() {
 
@@ -8,6 +9,7 @@ export function initAnims() {
         initScrollAnims(),
         initButtonAnims(),
         initManufCard(),
+        initNavAnims(),
     ]
 
     return () => {

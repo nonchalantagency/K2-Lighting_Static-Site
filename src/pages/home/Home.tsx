@@ -3,8 +3,11 @@ import { CtaButton } from "../../components/button/buttonCta";
 import { manufacturerData } from "../../data/manufacturerData";
 import { useGSAP } from "@gsap/react";
 import { initAnims } from "../../framework/modules/animations/initAnims";
+import { Nav } from "../../components/nav";
 
 import './manuf-card.scss'
+
+
 
 export function HomePage() {
 
@@ -16,6 +19,8 @@ export function HomePage() {
   return (
 
     <>
+      <Nav></Nav>
+      
       <header className="section hero light">
         <div className="wrapper full-h">
           <div className="content vertical align-centre justify-centre rem-1 above">
@@ -34,7 +39,7 @@ export function HomePage() {
         </div>
       </header>
 
-      <main className="section">
+      <main className="section" data-anim="nav-trigger">
         <div className="anchor-link-div" id="home_manufs"></div>
 
         <div className="wrapper">
