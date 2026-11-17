@@ -26,6 +26,7 @@ export function initManufCard() {
             const tray = el.querySelector(".manuf-card-tray");
             const div = el.querySelector(".manuf-tray-div");
             const img = el.querySelector(".manuf-card-logo");
+            const bgEl = el.querySelector(".manuf-card-bg")
 
             const tl = gsap.timeline({paused: true});
 
@@ -79,6 +80,15 @@ export function initManufCard() {
                 width: "100%",
                 ease: defaults.ease,
                 duration: (defaults.duration)
+            },0)
+
+            tl.fromTo(bgEl, {
+                opacity: 0
+            }, 
+            {
+                opacity: .50,
+                ease: defaults.ease,
+                duration: defaults.duration
             },0)
 
             el.addEventListener("mouseenter", () => {

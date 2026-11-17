@@ -1,0 +1,26 @@
+.footer {
+    width: 100%;
+    background-color: var(--colour-dark);
+    padding-top: calc(0.5 * var(--section-padding));
+    padding-bottom: calc(0.5 * var(--section-padding));
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-copy {
+    font-size: var(--text-p);
+    color: var(--colour-light);
+
+    .footer-link {
+        transition: color 0.3s;
+        color: var(--colour-light);
+        &:hover {
+            color: var(--colour-cta);
+        }
+    }
+}

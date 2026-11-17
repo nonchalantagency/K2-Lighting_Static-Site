@@ -246,16 +246,17 @@ a {
 
   position: relative;
   padding: 0;
-  height: 100vh;
+  height: auto;
   padding-top: var(--nav-h);
   padding-bottom: var(--nav-h);
 
+  aspect-ratio: 16/9;
 
-  @include bp.tablet {
-    height: 100svh;
-  }
   &.home-placeholder {
     padding: 2rem;
+  }
+  @include bp.mobile {
+    aspect-ratio: 9/16;
   }
 }
 
@@ -574,7 +575,7 @@ a {
 
 .anchor-link-div {
   width: 100%;
-  top: 0%;
+  top: calc(-1 * var(--nav-h));
   position: absolute;
   pointer-events: none;
   height: 0px;

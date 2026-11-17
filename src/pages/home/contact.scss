@@ -1,0 +1,67 @@
+@use '../../styles/breakpoints.scss' as bp;
+
+.contact-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    grid-column: 1/13;
+
+    align-items: start;
+    justify-content: start;
+
+    @include bp.tablet {
+        grid-column: 1/7;
+    }
+    @include bp.mobile-l {
+        grid-column: 1/5;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: auto;
+
+    color: var(--colour-light) !important;
+}
+
+.contact-copy {
+    display: inline-flex;
+    color: var(--colour-light);
+    font-size: var(--text-h6);
+
+    margin-bottom: 1rem;
+}
+.contact-address {
+    display: inline-flex;
+    color: var(--colour-light);
+    font-size: var(--text-h4);
+}
+
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon-wrap {
+    width: calc(1 * var(--text-h5));
+    aspect-ratio: 1/1;
+}
+
+.contact-icon {
+    width: 100%;
+}
+
+.contact-div {
+    width: 100%;
+    height: 2px;
+    background-color: var(--colour-light);
+    margin-top: 1.5rem;
+}

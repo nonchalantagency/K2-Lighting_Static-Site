@@ -67,6 +67,8 @@
     // text-transform: uppercase;
     margin-top: 1rem;
 
+    z-index: 10;
+
 }
 
 .manuf-card-tray {
@@ -83,6 +85,7 @@
 .manuf-tray-wrap {
     width: 100%;
     min-height: calc(0.5rem + var(--text-p-small) + 1px + 1rem);
+    z-index: 10;
 }
 
 .manuf-tray-div {
@@ -94,6 +97,7 @@
     background-color: var(--colour-cta);
 
     margin-top: .5rem;
+    
     
 }
 
@@ -122,6 +126,8 @@
     
     overflow: hidden;
 
+    z-index: 10;
+
 }
 
 .manuf-card-logo {
@@ -129,4 +135,13 @@
     object-fit: contain;
     width: 81%;
     // transition: transform 0.3s;
+}
+
+.manuf-card-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0%;
+    z-index: 0;
+    object-fit: cover;
 }

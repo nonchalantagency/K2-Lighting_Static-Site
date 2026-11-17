@@ -4,7 +4,10 @@ import { manufacturerData } from "../../data/manufacturerData";
 import { useGSAP } from "@gsap/react";
 import { initAnims } from "../../framework/modules/animations/initAnims";
 import { Nav } from "../../components/nav";
+import { VideoEmbed } from "./videoEmbed";
+import { Footer } from "../../components/footer";
 
+import './contact.scss'
 import './manuf-card.scss'
 
 
@@ -20,7 +23,7 @@ export function HomePage() {
 
     <>
       <Nav></Nav>
-      
+
       <header className="section hero light">
         <div className="wrapper full-h">
           <div className="content vertical align-centre justify-centre rem-1 above">
@@ -35,6 +38,7 @@ export function HomePage() {
           </div>
         </div>
         <div className="hero-bg-div">
+          <VideoEmbed></VideoEmbed>
           <img className="hero-bg-img" src="https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/header-test.jpg"></img>
         </div>
       </header>
@@ -50,6 +54,7 @@ export function HomePage() {
                 
                 <div className="manuf-card-wrap" data-anim="lazy-load">
                   <a key={item.name} className="manuf-card" href={item.websiteUrl} target="_blank" data-anim="manuf-card">
+                    <img className="manuf-card-bg" src="https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/gradient-glow.avif.png"></img>
                     <div className="manuf-card-logo-wrap">
                       <img src={item.logoUrl} className="manuf-card-logo"></img>
                     </div>
@@ -69,13 +74,42 @@ export function HomePage() {
       </main>
 
       <section className="section dark">
+        <div className="anchor-link-div" id="home_contact"></div>
         <div className="wrapper">
           <h2 className="section-heading light">Contact</h2>
           <div className="grid">
-            
+
+              <div className="contact-wrap">
+                <a className="contact" href="mailto:k2@k2lighting.co.uk" data-anim="contact">
+
+                  <p className="contact-copy">For lighting enquiries:</p>
+                  <div className="contact-row">
+                    <div className="contact-icon-wrap">
+                      <img className="contact-icon" src="https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/icons/mail_light.png"></img>
+                    </div>
+                    <p className="contact-address">k2@k2lighting.co.uk</p>
+                  </div>
+                  <div className="contact-div"></div>
+                </a>
+                <a className="contact" href="mailto:js@k2controls.co.uk" data-anim="contact">
+
+                  <p className="contact-copy">For control enquiries:</p>
+                  <div className="contact-row">
+                    <div className="contact-icon-wrap">
+                      <img className="contact-icon" src="https://raw.githubusercontent.com/nonchalantagency/NC-Client_Assets/refs/heads/main/K2%20Lighting/icons/mail_light.png"></img>
+                    </div>
+                    <p className="contact-address">js@k2controls.co.uk</p>
+                  </div>
+                  <div className="contact-div"></div>
+                </a>
+              </div>
+
           </div>
         </div>
       </section>
+
+
+      <Footer></Footer>
     
     </>
   )
